@@ -6,4 +6,9 @@ public class Mag extends Elve {
     public int attack() {
         return 3;
     }
+
+
+    public Mag() {
+        super("mag");
+    }
 }

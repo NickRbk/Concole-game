@@ -6,4 +6,8 @@ public class Warrior extends People {
     public int attack() {
         return 3;
     }
+
+    public Warrior() {
+        super("warrior");
+    }
 }
