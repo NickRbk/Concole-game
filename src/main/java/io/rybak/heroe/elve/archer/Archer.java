@@ -1,8 +1,8 @@
 package io.rybak.heroe.elve.archer;
 
-import io.rybak.race.impl.Elve;
+import io.rybak.race.impl.AbstractRace;
 
-public class Archer extends Elve {
+public class Archer extends AbstractRace {
     private FightAbility[] attackTypes = FightAbility.values();
 
     public int attack() {
@@ -10,7 +10,7 @@ public class Archer extends Elve {
     }
 
     public Archer() {
-        super("archer");
+        super("Elve race", "archer");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {

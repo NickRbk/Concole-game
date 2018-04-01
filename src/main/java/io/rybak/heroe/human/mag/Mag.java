@@ -1,8 +1,8 @@
-package io.rybak.heroe.people.mag;
+package io.rybak.heroe.human.mag;
 
-import io.rybak.race.impl.People;
+import io.rybak.race.impl.AbstractRace;
 
-public class Mag extends People {
+public class Mag extends AbstractRace {
     private FightAbility[] attackTypes = FightAbility.values();
 
     public int attack() {
@@ -10,7 +10,7 @@ public class Mag extends People {
     }
 
     public Mag() {
-        super("mag");
+        super("Human race", "mag");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {

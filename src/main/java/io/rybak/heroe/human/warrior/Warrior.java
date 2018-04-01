@@ -1,8 +1,8 @@
-package io.rybak.heroe.people.warrior;
+package io.rybak.heroe.human.warrior;
 
-import io.rybak.race.impl.People;
+import io.rybak.race.impl.AbstractRace;
 
-public class Warrior extends People {
+public class Warrior extends AbstractRace {
     private FightAbility[] attackTypes = FightAbility.values();
 
     public int attack() {
@@ -10,7 +10,7 @@ public class Warrior extends People {
     }
 
     public Warrior() {
-        super("warrior");
+        super("Human race", "warrior");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {
