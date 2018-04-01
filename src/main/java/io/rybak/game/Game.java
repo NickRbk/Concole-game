@@ -25,22 +25,24 @@ public class Game {
     }
 
     private static void fight(Team team1, Team team2) {
-
+        int step = 1;
         while(aliveHeroes(team1.getHeroes()).length > 0 && aliveHeroes(team2.getHeroes()).length > 0) {
             AbstractRace[] enemyPair = membersToFight(aliveHeroes(team1.getHeroes()), aliveHeroes(team2.getHeroes()));
 
+            System.out.println("\n<>Step#" + step);
             battle(enemyPair);
+            step++;
         }
 
         if(aliveHeroes(team1.getHeroes()).length > 0) {
-            Message.winInfo(team1);
+            Message.winInfo(team1, step - 1);
         } else {
-            Message.winInfo(team2);
+            Message.winInfo(team2, step - 1);
         }
     }
 
     private static void battle(AbstractRace[] enemyPair) {
-        System.out.println("\n");
+//        System.out.println("\n");
 
         // start fight preference heroe
         int attack1 = enemyPair[0].attack();

@@ -34,7 +34,7 @@ public class Team {
 
     @Override
     public String toString() {
-        return String.format("\n\tTeam#1: %s race, members: %d\n\t\t--> %s",
+        return String.format("\n\tTeam of %s race, members: %d\n\t\t--> %s",
                 heroes[0].getRace(), heroes.length, heroesTeam());
     }
 

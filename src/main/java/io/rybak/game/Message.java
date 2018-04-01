@@ -26,7 +26,7 @@ public class Message {
         System.out.println(team2.toString());
     }
 
-    public static void winInfo(Team team) {
-        System.out.println(String.format("\n\n=====Team of %s win=====", team.getName()));
+    public static void winInfo(Team team, int step) {
+        System.out.println(String.format("\n\n=====Team of %s win in %d steps=====", team.getName(), step));
     }
 }
