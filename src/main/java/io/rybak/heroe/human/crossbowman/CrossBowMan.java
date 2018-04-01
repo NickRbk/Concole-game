@@ -1,16 +1,16 @@
-package io.rybak.heroe.elve.archer;
+package io.rybak.heroe.human.crossbowman;
 
 import io.rybak.race.impl.AbstractRace;
 
-public class Archer extends AbstractRace {
+public class CrossBowMan extends AbstractRace {
     private FightAbility[] attackTypes = FightAbility.values();
 
     public int attack() {
         return randomAttackType(attackTypes).getDamage();
     }
 
-    public Archer() {
-        super("Elve", "archer");
+    public CrossBowMan() {
+        super("Human", "crossbowman");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {

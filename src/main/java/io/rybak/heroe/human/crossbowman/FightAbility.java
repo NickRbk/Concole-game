@@ -1,11 +1,10 @@
-package io.rybak.heroe.human.mag;
+package io.rybak.heroe.human.crossbowman;
 
 import lombok.Getter;
 
 public enum FightAbility {
 
-    ATTACK("attack", 7), SHOOT_CROSSBOW("shoot a crossbow", 11),
-    ATTACK_MAGIC("attack with magic", 9), CURE("+ imposition of an improvement", -9);
+    ATTACK("attack", 7), SHOOT_CROSSBOW("shoot a crossbow", 11);
 
     @Getter
     private String name;

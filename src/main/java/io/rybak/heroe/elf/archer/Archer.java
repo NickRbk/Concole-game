@@ -1,16 +1,16 @@
-package io.rybak.heroe.elve.mag;
+package io.rybak.heroe.elf.archer;
 
 import io.rybak.race.impl.AbstractRace;
 
-public class Mag extends AbstractRace {
+public class Archer extends AbstractRace {
     private FightAbility[] attackTypes = FightAbility.values();
 
     public int attack() {
         return randomAttackType(attackTypes).getDamage();
     }
 
-    public Mag() {
-        super("Elve", "mag");
+    public Archer() {
+        super("Elf", "archer");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {

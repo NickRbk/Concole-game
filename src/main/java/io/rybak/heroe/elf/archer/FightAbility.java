@@ -1,4 +1,4 @@
-package io.rybak.heroe.elve.archer;
+package io.rybak.heroe.elf.archer;
 
 import lombok.Getter;
 

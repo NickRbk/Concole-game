@@ -1,6 +1,7 @@
 package io.rybak.team;
 
-import io.rybak.heroe.elve.archer.Archer;
+import io.rybak.heroe.elf.archer.Archer;
+import io.rybak.heroe.human.crossbowman.CrossBowMan;
 import io.rybak.heroe.human.mag.Mag;
 import io.rybak.heroe.human.warrior.Warrior;
 import io.rybak.race.impl.AbstractRace;
@@ -17,13 +18,14 @@ public class Team {
     // Predefine arrays of heroes for each race
     private AbstractRace[] humanHeroes = {
             new Mag(),
-            new Warrior()
+            new Warrior(),
+            new CrossBowMan()
     };
 
     private AbstractRace[] elveHeroes = {
             new Archer(),
-            new io.rybak.heroe.elve.mag.Mag(),
-            new io.rybak.heroe.elve.warrior.Warrior()
+            new io.rybak.heroe.elf.mag.Mag(),
+            new io.rybak.heroe.elf.warrior.Warrior()
     };
 
     // Create custom constructor to create Team
