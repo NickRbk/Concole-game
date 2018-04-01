@@ -11,6 +11,9 @@ public class Team {
     @Getter
     AbstractRace[] heroes;
 
+    @Getter
+    String name;
+
     // Predefine arrays of heroes for each race
     private AbstractRace[] humanHeroes = {
             new Mag(),
@@ -26,6 +29,13 @@ public class Team {
     // Create custom constructor to create Team
     public Team(String race, int teamMembers) {
         this.heroes = createTeam(race, teamMembers);
+        this.name = race;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("\n\tTeam#1: %s race, members: %d\n\t\t--> %s",
+                heroes[0].getRace(), heroes.length, heroesTeam());
     }
 
     private AbstractRace[] createTeam(String race, int teamMembers) {
@@ -47,5 +57,16 @@ public class Team {
             return this.elveHeroes;
         }
         return this.humanHeroes;
+    }
+
+    // Function to print all members name in team
+    private String heroesTeam() {
+        String[] heroesName = new String[heroes.length];
+
+        for(int i = 0; i < heroes.length; i++) {
+            heroesName[i] = String.format("%s (%d)", heroes[i].getHeroeName(), heroes[i].getHealth());
+        }
+
+        return String.join(", ", heroesName);
     }
 }
