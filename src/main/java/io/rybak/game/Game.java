@@ -55,7 +55,7 @@ public class Game {
 
         // continue fight enemy heroe
         int attack2 = enemyPair[1].attack();
-        if(enemyPair[1].getHealth() <= 0) {
+        if(enemyPair[1].getHealth() == 0) {
             Message.enemyDefeated(enemyPair[1]);
         } else if(attack2 < 0) {
             // cure himself
@@ -66,7 +66,7 @@ public class Game {
             Message.fightInfo(enemyPair, "<<----");
         }
 
-        if(enemyPair[0].getHealth() <= 0) {
+        if(enemyPair[0].getHealth() == 0) {
             Message.enemyDefeated(enemyPair[0]);
         }
     }
