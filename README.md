@@ -17,7 +17,7 @@ _Human_ and _Elf_.
 **Elf** race has:
 - _mag_, fight ability: 
     - cure himself (+ 7HP);
-    - attack with magic (- 9HP);;
+    - attack with magic (- 9HP);
 - _archer_, fight ability:
     - shoot from the bow (- 12HP)
     - attach (- 8HP);
