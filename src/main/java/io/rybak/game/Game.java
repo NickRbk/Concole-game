@@ -42,7 +42,6 @@ public class Game {
     }
 
     private static void battle(AbstractRace[] enemyPair) {
-//        System.out.println("\n");
 
         // start fight preference heroe
         int attack1 = enemyPair[0].attack();
