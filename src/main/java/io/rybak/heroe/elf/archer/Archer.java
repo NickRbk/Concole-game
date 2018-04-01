@@ -17,4 +17,9 @@ public class Archer extends AbstractRace {
         int index = (int)Math.round( Math.random() * (attackTypes.length - 1) );
         return attackTypes[index];
     }
+
+    @Override
+    public AbstractRace createHeroe() {
+        return new Archer();
+    }
 }

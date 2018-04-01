@@ -2,7 +2,6 @@ package io.rybak.race.impl;
 
 import io.rybak.race.Activity;
 import lombok.Getter;
-import lombok.Setter;
 
 public abstract class AbstractRace implements Activity {
     @Getter
@@ -27,4 +26,10 @@ public abstract class AbstractRace implements Activity {
         this.race = race;
         this.heroeName = heroeName;
     }
+
+    /*This methods needed for below case
+       We store our heroes in array on Team class
+       then we have access to this array and invoke
+       this method to create new heroe */
+    public abstract AbstractRace createHeroe();
 }

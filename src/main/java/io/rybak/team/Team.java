@@ -47,7 +47,7 @@ public class Team {
         for(int i = 0; i < teamMembers;) {
             int index = (int)Math.round( Math.random() * (allHeroes.length - 1) );
 
-            selectedHeroes[i] = allHeroes[index];
+            selectedHeroes[i] = allHeroes[index].createHeroe();
             i++;
         }
 
