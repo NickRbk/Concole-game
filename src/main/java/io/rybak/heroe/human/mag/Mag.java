@@ -10,7 +10,7 @@ public class Mag extends AbstractRace {
     }
 
     public Mag() {
-        super("Human race", "mag");
+        super("Human", "mag");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {

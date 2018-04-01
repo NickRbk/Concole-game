@@ -10,7 +10,7 @@ public class Archer extends AbstractRace {
     }
 
     public Archer() {
-        super("Elve race", "archer");
+        super("Elve", "archer");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {
