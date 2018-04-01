@@ -34,3 +34,13 @@ App randomly choose enemy pair for battle, and which one fight first.. also rand
 When the enemy pair defined fight started and which type of attack defined arbitrary too.
 
 The team which lose all their heroes (health == 0) fail the game.
+
+#### Prerequisites:
+- install [Maven](https://maven.apache.org/download.cgi). 
+
+#### How to start up ?
+- git clone
+- build the maven project ```mvn package```
+- start app with the below cmd
+          
+            java -cp target/Battle-of-Race-1.0-SNAPSHOT.jar io.rybak.StartGame
