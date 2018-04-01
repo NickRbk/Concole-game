@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 public abstract class Elve implements Activity {
+    @Getter
+    private String race = "People race";
+
     @Getter @Setter
     private int health = 100;
 

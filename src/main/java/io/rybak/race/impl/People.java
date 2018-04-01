@@ -6,6 +6,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 public abstract class People implements Activity {
+    @Getter
+    private String race = "People race";
+
     @Getter @Setter
     private int health = 100;
 
