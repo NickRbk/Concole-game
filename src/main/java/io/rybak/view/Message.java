@@ -1,4 +1,4 @@
-package io.rybak.game;
+package io.rybak.view;
 
 import io.rybak.race.impl.AbstractRace;
 import io.rybak.team.Team;
@@ -6,19 +6,19 @@ import io.rybak.team.Team;
 public class Message {
     public static void cureHimself(AbstractRace enemyPair) {
         System.out.println(String.format("\tHeroe %s of %s race cure himself, health(%d)",
-                enemyPair.getHeroeName(), enemyPair.getRace(), enemyPair.getHealth()));
+                enemyPair.getHeroName(), enemyPair.getRace(), enemyPair.getHealth()));
     }
 
     public static void enemyDefeated(AbstractRace enemyPair) {
         System.out.println(String.format("\t\tDONE: Heroe %s of %s race defeated",
-                enemyPair.getHeroeName(), enemyPair.getRace()));
+                enemyPair.getHeroName(), enemyPair.getRace()));
     }
 
     public static void fightInfo(AbstractRace[] enemyPair, String impactDirection) {
         System.out.println(String.format("\t%s (%s) [health(%d)] %s %s (%s) [health(%d)]",
-                enemyPair[0].getHeroeName(), enemyPair[0].getRace(), enemyPair[0].getHealth(),
+                enemyPair[0].getHeroName(), enemyPair[0].getRace(), enemyPair[0].getHealth(),
                 impactDirection,
-                enemyPair[1].getHeroeName(), enemyPair[1].getRace(), enemyPair[1].getHealth()));
+                enemyPair[1].getHeroName(), enemyPair[1].getRace(), enemyPair[1].getHealth()));
     }
 
     public static void teamsInfo(Team team1, Team team2) {

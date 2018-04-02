@@ -1,9 +1,9 @@
-package io.rybak.heroe.elf.mag;
+package io.rybak.hero.human.warrior;
 
 import lombok.Getter;
 
 public enum FightAbility {
-    ATTACK_MAGIC("attack with magic", 9), CURE("+ imposition of an improvement", -7);
+    ATTACK("attack with a sword", 11);
 
     @Getter
     private String name;

@@ -1,9 +1,10 @@
-package io.rybak.heroe.human.warrior;
+package io.rybak.hero.human.crossbowman;
 
 import lombok.Getter;
 
 public enum FightAbility {
-    ATTACK("attack with a sword", 11);
+
+    ATTACK("attack", 7), SHOOT_CROSSBOW("shoot a crossbow", 11);
 
     @Getter
     private String name;

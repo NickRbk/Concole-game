@@ -2,6 +2,7 @@ package io.rybak.game;
 
 import io.rybak.race.impl.AbstractRace;
 import io.rybak.team.Team;
+import io.rybak.view.Message;
 
 import java.util.Arrays;
 
@@ -14,7 +15,7 @@ public class Game {
 
         // Create Teams
         Team humanTeam = new Team("Human", teamMembers);
-        Team elveTeam = new Team("Elve", teamMembers);
+        Team elveTeam = new Team("Elf", teamMembers);
 
         // Print info about Teams
         Message.teamsInfo(humanTeam, elveTeam);
@@ -43,7 +44,7 @@ public class Game {
 
     private static void battle(AbstractRace[] enemyPair) {
 
-        // start fight preference heroe
+        // start fight preference hero
         int attack1 = enemyPair[0].attack();
         if(attack1 < 0) {
             // cure himself
@@ -54,7 +55,7 @@ public class Game {
             Message.fightInfo(enemyPair, "---->>");
         }
 
-        // continue fight enemy heroe
+        // continue fight enemy hero
         int attack2 = enemyPair[1].attack();
         if(enemyPair[1].getHealth() == 0) {
             Message.enemyDefeated(enemyPair[1]);
@@ -95,7 +96,7 @@ public class Game {
     private static AbstractRace[] aliveHeroes(AbstractRace[] heroes) {
         // return only alive heroes
         return Arrays.stream(heroes)
-                .filter(heroe -> heroe.getHealth() > 0)
+                .filter(hero -> hero.getHealth() > 0)
                 .toArray(AbstractRace[]::new);
     }
 }

@@ -1,16 +1,16 @@
-package io.rybak.heroe.human.warrior;
+package io.rybak.hero.elf.archer;
 
 import io.rybak.race.impl.AbstractRace;
 
-public class Warrior extends AbstractRace {
+public class Archer extends AbstractRace {
     private FightAbility[] attackTypes = FightAbility.values();
 
     public int attack() {
         return randomAttackType(attackTypes).getDamage();
     }
 
-    public Warrior() {
-        super("Human", "warrior");
+    public Archer() {
+        super("Elf", "archer");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {
@@ -19,7 +19,7 @@ public class Warrior extends AbstractRace {
     }
 
     @Override
-    public AbstractRace createHeroe() {
-        return new Warrior();
+    public AbstractRace createHero() {
+        return new Archer();
     }
 }

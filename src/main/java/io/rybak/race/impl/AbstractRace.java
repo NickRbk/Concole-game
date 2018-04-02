@@ -8,7 +8,7 @@ public abstract class AbstractRace implements Activity {
     private String race;
 
     @Getter
-    private String heroeName;
+    private String heroName;
 
     @Getter
     private int health = 100;
@@ -22,14 +22,14 @@ public abstract class AbstractRace implements Activity {
         }
     }
 
-    public AbstractRace(String race, String heroeName) {
+    public AbstractRace(String race, String heroName) {
         this.race = race;
-        this.heroeName = heroeName;
+        this.heroName = heroName;
     }
 
-    /*This methods needed for below case
+    /*This method needed for below case
        We store our heroes in array on Team class
        then we have access to this array and invoke
-       this method to create new heroe */
-    public abstract AbstractRace createHeroe();
+       this method to create new hero */
+    public abstract AbstractRace createHero();
 }

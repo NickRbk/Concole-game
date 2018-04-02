@@ -1,4 +1,4 @@
-package io.rybak.heroe.human.mag;
+package io.rybak.hero.human.mag;
 
 import lombok.Getter;
 

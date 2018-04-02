@@ -1,16 +1,16 @@
-package io.rybak.heroe.elf.mag;
+package io.rybak.hero.human.crossbowman;
 
 import io.rybak.race.impl.AbstractRace;
 
-public class Mag extends AbstractRace {
+public class CrossBowMan extends AbstractRace {
     private FightAbility[] attackTypes = FightAbility.values();
 
     public int attack() {
         return randomAttackType(attackTypes).getDamage();
     }
 
-    public Mag() {
-        super("Elf", "mag");
+    public CrossBowMan() {
+        super("Human", "crossbowman");
     }
 
     private FightAbility randomAttackType(FightAbility[] attackTypes) {
@@ -19,7 +19,7 @@ public class Mag extends AbstractRace {
     }
 
     @Override
-    public AbstractRace createHeroe() {
-        return new Mag();
+    public AbstractRace createHero() {
+        return new CrossBowMan();
     }
 }

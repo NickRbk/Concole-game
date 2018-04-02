@@ -1,9 +1,9 @@
 package io.rybak.team;
 
-import io.rybak.heroe.elf.archer.Archer;
-import io.rybak.heroe.human.crossbowman.CrossBowMan;
-import io.rybak.heroe.human.mag.Mag;
-import io.rybak.heroe.human.warrior.Warrior;
+import io.rybak.hero.elf.archer.Archer;
+import io.rybak.hero.human.crossbowman.CrossBowMan;
+import io.rybak.hero.human.mag.Mag;
+import io.rybak.hero.human.warrior.Warrior;
 import io.rybak.race.impl.AbstractRace;
 import lombok.Getter;
 import lombok.NonNull;
@@ -22,10 +22,10 @@ public class Team {
             new CrossBowMan()
     };
 
-    private AbstractRace[] elveHeroes = {
+    private AbstractRace[] elfHeroes = {
             new Archer(),
-            new io.rybak.heroe.elf.mag.Mag(),
-            new io.rybak.heroe.elf.warrior.Warrior()
+            new io.rybak.hero.elf.mag.Mag(),
+            new io.rybak.hero.elf.warrior.Warrior()
     };
 
     // Create custom constructor to create Team
@@ -47,7 +47,7 @@ public class Team {
         for(int i = 0; i < teamMembers;) {
             int index = (int)Math.round( Math.random() * (allHeroes.length - 1) );
 
-            selectedHeroes[i] = allHeroes[index].createHeroe();
+            selectedHeroes[i] = allHeroes[index].createHero();
             i++;
         }
 
@@ -55,8 +55,8 @@ public class Team {
     }
 
     private AbstractRace[] findRaceHeroes(@NonNull String race) {
-        if(race.equals("Elve")) {
-            return this.elveHeroes;
+        if(race.equals("Elf")) {
+            return this.elfHeroes;
         }
         return this.humanHeroes;
     }
@@ -66,7 +66,7 @@ public class Team {
         String[] heroesName = new String[heroes.length];
 
         for(int i = 0; i < heroes.length; i++) {
-            heroesName[i] = String.format("%s (%d)", heroes[i].getHeroeName(), heroes[i].getHealth());
+            heroesName[i] = String.format("%s (%d)", heroes[i].getHeroName(), heroes[i].getHealth());
         }
 
         return String.join(", ", heroesName);

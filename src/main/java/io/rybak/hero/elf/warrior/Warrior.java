@@ -1,4 +1,4 @@
-package io.rybak.heroe.elf.warrior;
+package io.rybak.hero.elf.warrior;
 
 import io.rybak.race.impl.AbstractRace;
 
@@ -19,7 +19,7 @@ public class Warrior extends AbstractRace {
     }
 
     @Override
-    public AbstractRace createHeroe() {
+    public AbstractRace createHero() {
         return new Warrior();
     }
 }
