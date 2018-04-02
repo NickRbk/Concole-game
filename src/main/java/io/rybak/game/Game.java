@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class Game {
     public static void start() {
-        System.out.println("Hello player, start game!\nWe choose team members randomly");
+        Message.welcomeInfo();
 
         // Define teams length
         int teamMembers = (int)Math.round( Math.random() * 3 + 3); // team members [3;6]

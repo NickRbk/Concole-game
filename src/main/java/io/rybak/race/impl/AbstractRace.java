@@ -1,9 +1,10 @@
 package io.rybak.race.impl;
 
 import io.rybak.race.Activity;
+import io.rybak.view.MagicColors;
 import lombok.Getter;
 
-public abstract class AbstractRace implements Activity {
+public abstract class AbstractRace implements Activity, MagicColors {
     @Getter
     private String race;
 
@@ -23,7 +24,7 @@ public abstract class AbstractRace implements Activity {
     }
 
     public AbstractRace(String race, String heroName) {
-        this.race = race;
+        this.race = race.equals("Elf") ? YELLOW + race + RESET : BLUE + race + RESET;
         this.heroName = heroName;
     }
 
